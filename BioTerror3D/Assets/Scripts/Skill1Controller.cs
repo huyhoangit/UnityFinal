@@ -4,7 +4,7 @@ public class Skill1 : Bullet
 {
     protected override void Start()
     {
-        base.Start(); // Gọi Start() của Bullet
+        base.Start();
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -22,6 +22,5 @@ public class Skill1 : Bullet
                 enemy.TakeDamage(damage);
             }
         }
-        // KHÔNG hủy đạn khi va chạm
     }
 }

@@ -18,7 +18,8 @@ public class PlayerBullet : Bullet
         {
             EnemyController enemy = other.GetComponent<EnemyController>();
             if (enemy != null)
-            {
+            { 
+                Debug.Log("Bullet hit enemy");
                 enemy.TakeDamage(damage);
             }
             Destroy(gameObject); 
