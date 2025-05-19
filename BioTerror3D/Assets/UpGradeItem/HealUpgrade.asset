@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: HealUpgrade
   m_EditorClassIdentifier: 
   upgradeID: Heal
-  displayName: "B\u1EC1n B\u1EC9"
-  descriptionFormat: "+ 2% h\u1ED3i m\xE1u m\u1ED7i gi\xE2y"
-  icon: {fileID: 0}
+  displayName: Unyielding Vitality
+  descriptionFormat: + 2% HP Regen per Second
+  icon: {fileID: 21300000, guid: 41c11be81ce428c40a7e4050359daccc, type: 3}
   upgradeType: 0
   maxLevel: 5
   statToModify: healthRegenRate

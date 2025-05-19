@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: CritUpgrade
   m_EditorClassIdentifier: 
   upgradeID: Crit
-  displayName: "T\xE0n B\u1EA1o"
-  descriptionFormat: "+ 5% ch\xED m\u1EA1ng"
-  icon: {fileID: 0}
+  displayName: Savage Fury
+  descriptionFormat: + 2% Critical Chance
+  icon: {fileID: 21300000, guid: 86bc2a6ea046b5e4581196650420f6f7, type: 3}
   upgradeType: 0
   maxLevel: 5
   statToModify: critChance
-  valuePerLevel: 5
+  valuePerLevel: 2
   isPercentage: 0
   weaponPrefab: {fileID: 0}
   baseCost: 50

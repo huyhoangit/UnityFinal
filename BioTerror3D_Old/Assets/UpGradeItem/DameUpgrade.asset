@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9798b6a3e5deb428327b0a6be15186, type: 3}
+  m_Name: DameUpgrade
+  m_EditorClassIdentifier: 
+  upgradeID: Dame
+  displayName: "S\xE1t Th\u01B0\u01A1ng"
+  descriptionFormat: "+ 5 s\xE1t th\u01B0\u01A1ng \u0111\xF2n \u0111\xE1nh"
+  icon: {fileID: 0}
+  upgradeType: 0
+  maxLevel: 5
+  statToModify: bulletDamage
+  valuePerLevel: 5
+  isPercentage: 0
+  weaponPrefab: {fileID: 6641581262741437355, guid: ceefc7f66e6ada446aa78c1cd9411ef4, type: 3}
+  baseCost: 50
+  costIncreasePerLevel: 25

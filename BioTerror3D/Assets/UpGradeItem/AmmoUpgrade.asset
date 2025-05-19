@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: AmmoUpgrade
   m_EditorClassIdentifier: 
   upgradeID: Ammo
-  displayName: "C\u1EE9ng C\xE1p"
-  descriptionFormat: "+ 3 gi\xE1p"
-  icon: {fileID: 0}
+  displayName: Ironclad Might
+  descriptionFormat: + 3 Armor
+  icon: {fileID: 21300000, guid: 0ecec7dc525e58947a8d694040f5fc2f, type: 3}
   upgradeType: 0
   maxLevel: 5
   statToModify: armor

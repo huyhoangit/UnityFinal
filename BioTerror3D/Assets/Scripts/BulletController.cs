@@ -4,7 +4,26 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] protected float speed = 10f;
     [SerializeField] protected float lifetime = 3f;
-    [SerializeField] protected int damage = 10;
+    protected float damage;
+    protected float armorPenetration;
+    protected PlayerStats playerStats;
+
+    public virtual void Initialize(PlayerStats stats, float customSpeed = -1f)
+    {
+        playerStats = stats;
+        damage = stats.GetBulletDamage();
+        armorPenetration = stats.GetArmorPenetration();
+        if (customSpeed >= 0f)
+        {
+            speed = customSpeed;
+        }
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.linearVelocity = transform.forward * speed;
+        }
+    }
 
     protected virtual void Start()
     {
@@ -18,7 +37,8 @@ public class Bullet : MonoBehaviour
             EnemyController enemy = other.GetComponent<EnemyController>();
             if (enemy != null)
             {
-                enemy.TakeDamage(damage);
+                enemy.TakeDamage((int)damage, armorPenetration);
+                Destroy(gameObject);
             }
         }
     }

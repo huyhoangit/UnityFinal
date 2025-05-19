@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: APUpgrade
   m_EditorClassIdentifier: 
   upgradeID: AP
-  displayName: "Ph\xF9 Ph\xE9p"
-  descriptionFormat: + 10% SMPT
-  icon: {fileID: 0}
+  displayName: Arcane Dominion
+  descriptionFormat: + 10% Magic Power
+  icon: {fileID: 21300000, guid: 003c8d049d2e60042bb747a21ceaebc5, type: 3}
   upgradeType: 0
   maxLevel: 5
   statToModify: 

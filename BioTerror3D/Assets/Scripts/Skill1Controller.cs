@@ -2,25 +2,28 @@
 
 public class Skill1 : Bullet
 {
-    protected override void Start()
+    [SerializeField] private float explosionRadius = 2f; 
+
+    public override void Initialize(PlayerStats stats, float customSpeed = -1f)
     {
-        base.Start();
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.linearVelocity = transform.forward * speed;
-        }
+        base.Initialize(stats, customSpeed);
+        damage *= 1.5f;
     }
 
     protected override void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
-            EnemyController enemy = other.GetComponent<EnemyController>();
-            if (enemy != null)
+            Collider[] hitEnemies = Physics.OverlapSphere(transform.position, explosionRadius, LayerMask.GetMask("Enemy"));
+            foreach (Collider enemyCollider in hitEnemies)
             {
-                enemy.TakeDamage(damage);
+                EnemyController enemy = enemyCollider.GetComponent<EnemyController>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage((int)damage, armorPenetration);
+                }
             }
+            Destroy(gameObject);
         }
     }
 }
